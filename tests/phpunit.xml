@@ -1,0 +1,14 @@
+<phpunit 
+	bootstrap="../vendor/autoload.php"
+	cacheResult="false"
+	colors="false"
+	verbose="true"
+>
+	<testsuites>
+		<testsuite name="OData1C Client Tests">
+			<directory>.</directory>
+			<file>ClientTest.php</file>
+			<file>QueryTest.php</file>
+		</testsuite>
+	</testsuites>
+</phpunit>
