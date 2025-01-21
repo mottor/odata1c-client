@@ -13,7 +13,7 @@ abstract class AbstractResult
 		'code' => null,
 		'message' => null,
 	];
-	protected mixed $odataMetadata = null;
+	protected ?string $odataMetadata = null;
 	protected HttpRequest $request;
 	protected HttpResponse $response;
 
@@ -28,17 +28,17 @@ abstract class AbstractResult
 		return $this->ok === true;
 	}
 
-    public function getOdataMetadata(): mixed
+    public function getOdataMetadata(): ?string
     {
         return $this->odataMetadata;
     }
 
-    public function getOdataErrorCode(): int|null
+    public function getOdataErrorCode(): int
     {
         return (int)$this->odataError['code'];
     }
 
-    public function getOdataErrorMessage(): string|null
+    public function getOdataErrorMessage(): ?string
     {
         return $this->odataError['message'];
     }
